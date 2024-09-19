@@ -9,14 +9,15 @@ public class TipCalculator {
 
         //I used this website for the Math.round https://stackoverflow.com/questions/8825209/rounding-decimal-points
         double totalTip =  ((double) percent / 100.0) * cost;
-        totalTip = Math.round(totalTip * 100.0) / 100.0;
         double bill = totalTip + cost;
-        bill = Math.round(bill * 100.0) / 100.0;
         double costBefore = cost / (double) people;
-        costBefore = Math.round(costBefore * 100.0) / 100.0;
         double tipPerson = totalTip / (double) people;
-        tipPerson = Math.round(tipPerson * 100.0) / 100.0;
         double totalPerson = costBefore + tipPerson;
+        
+        totalTip = Math.round(totalTip * 100.0) / 100.0;
+        bill = Math.round(bill * 100.0) / 100.0;
+        costBefore = Math.round(costBefore * 100.0) / 100.0;
+        tipPerson = Math.round(tipPerson * 100.0) / 100.0;
         totalPerson = Math.round(totalPerson * 100.0) / 100.0;
                        
         result.append("-------------------------------\n");
@@ -36,9 +37,9 @@ public class TipCalculator {
      public static void main(String[] args) 
     {
         //try different values for people, percent, and cost to test your program before running test cases
-        int people = 2; 
-        int percent = 5;
-        double cost = 29.56;     
+        int people = 12; 
+        int percent = 15;
+        double cost = 566.97;     
         
 
        
